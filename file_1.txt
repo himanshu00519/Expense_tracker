@@ -8,7 +8,7 @@ Point both to "#" as placeholder hrefs since the pages don't exist yet.
 
 Do not modify anything else on the page.
 
-git commit -m "landing: add terms and privacy links to footer”
+git commit -m 'landing: add terms and privacy links to footer'
 
 Create a "Terms and Conditions" page for Spendly.
 
@@ -18,10 +18,11 @@ GET /terms → renders templates/terms.html
 content appropriate for a personal expense tracking app.
 Include sections like: Acceptance of Terms, Use of Service,
 User Data, Limitations of Liability, and Changes to Terms.
-Extend base.html if it exists, otherwise match the style of
+Extend @base.html if it exists, otherwise match the style of
 landing.html.
 3. In @templates/landing.html, update the "Terms and Conditions"
 footer link href from "#" to "/terms".
+4. Make sure the appearance looks like the website's theme
 
 git commit -m "landing: add terms and conditions page and route”
 

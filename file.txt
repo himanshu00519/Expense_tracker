@@ -1,0 +1,166 @@
+What's Currently Implemented 
+
+    1. Landing Page - A marketing-style homepage   
+  with:                                          
+    - Hero section promoting the expense tracker 
+    - Feature highlights (log expenses,          
+  understand patterns, filter by time)           
+    - Call-to-action buttons for                 
+  registration/login
+
+    2. Basic Routes:
+    - / - Landing page                           
+    - /register - Registration page (template    
+  exists)                                        
+    - /login - Login page (template exists)
+
+What's Planned (Not Yet Implemented)
+    The placeholder routes indicate students will  
+  build:          
+  - Logout functionality (Step 3)                
+  - User profile page (Step 4)                   
+  - Add expense form (Step 7) 
+  - Edit expense (Step 8)                        
+  - Delete expense (Step 9) 
+
+Tech Stack
+    - Backend: Flask 3.1.3                         
+  - Database: SQLite (via database/db.py -       
+  currently empty, students will implement)      
+  - Testing: pytest + pytest-flask
+  - Frontend: HTML templates + CSS + JavaScript  
+  (scaffold files exist)
+
+Database Setup Needed                          
+                  
+  The database/db.py file is empty — students    
+  need to implement:
+  - get_db() - SQLite connection helper          
+  - init_db() - Table creation                   
+  - seed_db() - Sample data
+
+
+
+
+
+
+Explain the project structure to me            
+                                      
+    ⏺ Let me explore the full project structure to   
+    give you a complete picture.                  
+                                                    
+    Searched for 1 pattern, read 5 files (ctrl+o to
+    expand)                                       
+                                        
+    ⏺ Project Structure                              
+                                                    
+    Here's the complete breakdown of the Spendly   
+    expense tracker project:                       
+                                                    
+    expense-tracker/                               
+    ├── app.py                    # Flask          
+    application entry point                        
+    ├── requirements.txt          # Python         
+    dependencies                                   
+    ├── database/   
+    │   ├── __init__.py          # Empty package   
+    initializer                                    
+    │   └── db.py                # Database        
+    utilities (empty - to be implemented)          
+    ├── static/     
+    │   ├── css/                                   
+    │   │   └── style.css        # All styles (530+
+    lines)                                        
+    │   └── js/     
+    │       └── main.js          # JavaScript      
+    (empty - to be implemented)                    
+    └── templates/                                 
+        ├── base.html            # Base template   
+    with navbar/footer                             
+        ├── landing.html         # Homepage        
+        ├── login.html           # Login form      
+        └── register.html        # Registration    
+    form                                           
+                                                    
+    ---                                            
+    File-by-File Breakdown
+                                                    
+    app.py - Main Application
+                                                    
+    - Flask app initialization                     
+    - Routes: /, /login, /register (working)       
+    - Placeholder routes: /logout, /profile,       
+    /expenses/* (to implement)                     
+                                                    
+    database/ - Data Layer                         
+                    
+    ┌─────────────┬─────────────────────────────┐  
+    │    File     │           Status            │
+    ├─────────────┼─────────────────────────────┤  
+    │ __init__.py │ Empty                       │
+    ├─────────────┼─────────────────────────────┤  
+    │             │ Contains comments           │  
+    │ db.py       │ describing what students    │  
+    │             │ should implement: get_db(), │  
+    │             │  init_db(), seed_db()       │  
+    └─────────────┴─────────────────────────────┘
+
+    static/ - Frontend Assets                      
+    
+    ┌───────────────┬───────────────────────────┐  
+    │     File      │          Purpose          │
+    ├───────────────┼───────────────────────────┤  
+    │               │ Complete styling - CSS    │
+    │ css/style.css │ variables, navbar, hero,  │  
+    │               │ forms, buttons, footer,   │  
+    │               │ responsive                │
+    ├───────────────┼───────────────────────────┤  
+    │               │ Empty - students will add │
+    │ js/main.js    │  JavaScript for           │  
+    │               │ interactivity             │
+    └───────────────┴───────────────────────────┘  
+                    
+    templates/ - HTML Views                        
+    
+    ┌───────────────┬───────────────────────────┐  
+    │     File      │        Description        │
+    ├───────────────┼───────────────────────────┤  
+    │               │ Base layout with navbar,  │
+    │ base.html     │ footer, Google Fonts (DM  │  
+    │               │ Serif Display + DM Sans)  │  
+    ├───────────────┼───────────────────────────┤
+    │               │ Marketing homepage with   │  
+    │ landing.html  │ hero, features grid, CTA  │  
+    │               │ section                   │
+    ├───────────────┼───────────────────────────┤  
+    │ login.html    │ Email/password login form │
+    │               │  with error display       │  
+    ├───────────────┼───────────────────────────┤
+    │ register.html │ Registration form (name,  │  
+    │               │ email, password)          │  
+    └───────────────┴───────────────────────────┘
+                                                    
+    ---             
+    Visual Design System
+                                                    
+    The CSS defines a complete design system:
+    - Colors: Paper/ink theme with green accent    
+    (#1a472a) and gold secondary (#c17f24)         
+    - Typography: DM Serif Display (headings) + DM 
+    Sans (body)                                    
+    - Components: Navbar, hero cards, feature      
+    cards, auth forms, buttons, footer       
+    - Responsive: Mobile breakpoints at 900px and  
+    600px           
+                                                    
+    ---             
+    What's Missing (Student Implementation)        
+                                                    
+    1. Database layer - SQLite connection and table
+    creation                                      
+    2. Authentication - Login/register route
+    handlers, sessions                             
+    3. Expense CRUD - Add, edit, delete expenses
+    4. User profile - View/edit user settings      
+    5. JavaScript - Form validation, dynamic UI    
+    updates

@@ -20,8 +20,68 @@
         </p>
         <div class="hero-actions">
             <a href="{{ url_for('register') }}" class="btn-primary">Create free account</a>
-            <a href="#how-it-works" class="btn-secondary">See how it works</a>
+            <a href="#" class="btn-secondary" id="openModal">See how it works</a>
         </div>
+    </div>
+    <div class="hero-visual">
+        <div class="dashboard-mockup">
+            <div class="mockup-header">
+                <span class="mockup-dot red"></span>
+                <span class="mockup-dot yellow"></span>
+                <span class="mockup-dot green"></span>
+            </div>
+            <div class="mockup-stats">
+                <div class="stat-card">
+                    <span class="stat-label">This month</span>
+                    <span class="stat-value">₹18,240</span>
+                    <span class="stat-change positive">+12% vs last</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Budget left</span>
+                    <span class="stat-value">₹6,760</span>
+                    <span class="stat-change remaining">43% remaining</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Transactions</span>
+                    <span class="stat-value">34</span>
+                    <span class="stat-change muted">this month</span>
+                </div>
+            </div>
+            <div class="mockup-bars">
+                <div class="bar-row">
+                    <span class="bar-cat">Food</span>
+                    <div class="bar-track">
+                        <div class="bar-fill food" style="width: 75%"></div>
+                    </div>
+                </div>
+                <div class="bar-row">
+                    <span class="bar-cat">Travel</span>
+                    <div class="bar-track">
+                        <div class="bar-fill travel" style="width: 55%"></div>
+                    </div>
+                </div>
+                <div class="bar-row">
+                    <span class="bar-cat">Bills</span>
+                    <div class="bar-track">
+                        <div class="bar-fill bills" style="width: 45%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Video Modal -->
+<div class="modal-overlay" id="videoModal">
+    <div class="modal-container">
+        <button class="modal-close" id="closeModal">
+            <span>&times;</span>
+        </button>
+        <div class="modal-video-wrapper">
+            <iframe id="videoFrame" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
     </div>
     <div class="hero-visual">
         <div class="dashboard-mockup">
